@@ -11,6 +11,39 @@
 			li.activate>a{
 				position: relative;
 			}
+			.active::after{
+				content: "";
+				position: absolute;
+				z-index: 1;
+				background: red;
+				top: -380px;
+				left: -315px;
+				width: 99.3vw;
+				height: 100%;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+			.card-insider{
+				display: none;
+			}
+			.active .card-insider {
+				display: block;
+			}
+			.active .card{
+				z-index: 2;
+			}
+			.active .card-image{
+				position: absolute;
+				top: -200px;
+			}
+			.active .card-title{
+				padding: 50px;
+				text-align: center;
+				font-size: 80px;
+				font-weight: 500;
+				margin: -40px 0 0 0;
+				text-transform: capitalize;
+			}
 			li.activate>a::after{
 				content: "";
 				position: absolute;
@@ -98,16 +131,18 @@
 		</div>
 		<div class="body" id="test1">
 			<div class="container grid row">
-				<div class="col s4 card 1">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="http://placehold.it/400x320/">
-					</div>
-					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">Aqua</span>
-					</div>
-					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa id maiores ducimus. Magnam esse debitis ducimus. Qui sint, velit enim error eius fuga, et harum natus fugiat unde deserunt temporibus laudantium nisi quos asperiores assumenda. In incidunt, vel ratione dolor suscipit reiciendis officiis, modi eum, nesciunt error perferendis voluptatem eius, eligendi voluptatum ab rem culpa similique! Eos ipsam illum odit, quos aspernatur a similique voluptatibus! Sed, rem, dolorum. Aspernatur quas minima dolorem debitis odio iure quam ratione repellat molestiae ullam aut sed facilis harum, saepe, eum vero, sunt autem. Ducimus, laboriosam odit dolores? Quia, eum numquam ratione omnis modi asperiores voluptatem perferendis sint eligendi ullam, cupiditate culpa iusto, quae quis consectetur similique dolor necessitatibus officia nam minus quo voluptatibus sunt nesciunt rem. Neque quisquam veritatis unde ipsa repudiandae expedita nam harum minus est quod nisi pariatur velit, facere laboriosam porro commodi mollitia nobis magnam impedit nostrum dolorum fugit, natus maiores. Illo, consectetur nulla. Iste, blanditiis inventore fugiat sint nesciunt dolorum ipsam maxime eveniet aliquam saepe! Perferendis quidem, doloribus quod odio est praesentium. Voluptates nemo delectus possimus? Totam perspiciatis, minima fugit facilis distinctio, nobis rerum amet magni ducimus ipsam, ex voluptatum temporibus aspernatur voluptate nam, ut illo dignissimos eligendi vel. Architecto labore porro eos laboriosam, doloremque nulla, quaerat soluta expedita minus mollitia error sit, temporibus voluptatum accusantium! Adipisci eos enim sit magnam officia. Ex, molestias repellendus, dolorum laborum, ipsa nulla soluta impedit reiciendis ipsum dignissimos ab nobis! Temporibus officiis asperiores, consequatur reprehenderit, dignissimos quae iure nam molestiae soluta maiores necessitatibus, similique odit molestias hic, optio eligendi! Id, sit aut, vel nam repellendus nostrum ad aspernatur officia. Assumenda perferendis distinctio unde rem commodi error veritatis facilis id dolor odit neque consequatur sapiente quia earum sequi, enim minima nobis libero voluptatem tenetur, inventore at mollitia officia voluptas. Consectetur dignissimos facere officia odio nihil! Alias velit dolores earum id qui iste, incidunt perspiciatis maxime, mollitia itaque eius eos! Magni modi blanditiis suscipit esse, distinctio culpa doloribus earum sit, vitae velit. Esse nulla eius earum doloribus, delectus omnis perspiciatis maxime ea a assumenda, blanditiis iste hic deserunt quae fuga in fugiat? Libero soluta dolorum laudantium, sapiente. Ratione magni provident iste doloribus esse nisi eum at quis dolores voluptate, harum nam saepe id eligendi tempore quia perferendis repellat incidunt vero accusamus ad sequi repudiandae similique aperiam? Doloribus eum dolore nostrum, velit eos esse assumenda debitis minima ratione voluptates nam excepturi illum odit pariatur, suscipit eligendi numquam ad quis! Enim veritatis corrupti, id numquam recusandae magnam rerum eligendi asperiores deserunt perspiciatis facilis modi tempore placeat itaque, illo nam natus at, repellendus ut sapiente perferendis. Aperiam, non, pariatur. Maxime assumenda, corporis, dolores ipsa corrupti minus inventore. Placeat hic eum quos explicabo, ducimus reiciendis sint ad natus, quo corporis aliquam soluta, consectetur magnam! Cupiditate totam quibusdam dolor, soluta itaque, distinctio similique ipsa eos mollitia debitis nemo? Suscipit ullam et quae culpa dignissimos temporibus aspernatur facilis quis consequatur voluptate non deleniti, animi praesentium, expedita obcaecati minus quo consequuntur eaque deserunt repudiandae amet iure optio rem ipsa! Officiis labore, quidem dolores.</p>
+				<div class="active">
+					<div class="col s12 card 1">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activador" src="http://placehold.it/400x320/">
+						</div>
+						<div class="card-content">
+							<span class="card-title grey-text text-darken-4">Aqua</span>
+						</div>
+						<div class="card-insider">
+							<!--						<span class="card-title grey-text text-darken-4">Card Title</span>-->
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa id maiores ducimus. Magnam esse debitis ducimus. Qui sint, velit enim error eius fuga, et harum natus fugiat unde deserunt temporibus laudantium nisi quos asperiores assumenda. In incidunt, vel ratione dolor suscipit reiciendis officiis, modi eum, nesciunt error perferendis voluptatem eius, eligendi voluptatum ab rem culpa similique! Eos ipsam illum odit, quos aspernatur a similique voluptatibus! Sed, rem, dolorum. Aspernatur quas minima dolorem debitis odio iure quam ratione repellat molestiae ullam aut sed facilis harum, saepe, eum vero, sunt autem. Ducimus, laboriosam odit dolores? Quia, eum numquam ratione omnis modi asperiores voluptatem perferendis sint eligendi ullam, cupiditate culpa iusto, quae quis consectetur similique dolor necessitatibus officia nam minus quo voluptatibus sunt nesciunt rem. Neque quisquam veritatis unde ipsa repudiandae expedita nam harum minus est quod nisi pariatur velit, facere laboriosam porro commodi mollitia nobis magnam impedit nostrum dolorum fugit, natus maiores. Illo, consectetur nulla. Iste, blanditiis inventore fugiat sint nesciunt dolorum ipsam maxime eveniet aliquam saepe! Perferendis quidem, doloribus quod odio est praesentium. Voluptates nemo delectus possimus? Totam perspiciatis, minima fugit facilis distinctio, nobis rerum amet magni ducimus ipsam, ex voluptatum temporibus aspernatur voluptate nam, ut illo dignissimos eligendi vel. Architecto labore porro eos laboriosam, doloremque nulla, quaerat soluta expedita minus mollitia error sit, temporibus voluptatum accusantium! Adipisci eos enim sit magnam officia. Ex, molestias repellendus, dolorum laborum, ipsa nulla soluta impedit reiciendis ipsum dignissimos ab nobis! Temporibus officiis asperiores, consequatur reprehenderit, dignissimos quae iure nam molestiae soluta maiores necessitatibus, similique odit molestias hic, optio eligendi! Id, sit aut, vel nam repellendus nostrum ad aspernatur officia. Assumenda perferendis distinctio unde rem commodi error veritatis facilis id dolor odit neque consequatur sapiente quia earum sequi, enim minima nobis libero voluptatem tenetur, inventore at mollitia officia voluptas. Consectetur dignissimos facere officia odio nihil! Alias velit dolores earum id qui iste, incidunt perspiciatis maxime, mollitia itaque eius eos! Magni modi blanditiis suscipit esse, distinctio culpa doloribus earum sit, vitae velit. Esse nulla eius earum doloribus, delectus omnis perspiciatis maxime ea a assumenda, blanditiis iste hic deserunt quae fuga in fugiat? Libero soluta dolorum laudantium, sapiente. Ratione magni provident iste doloribus esse nisi eum at quis dolores voluptate, harum nam saepe id eligendi tempore quia perferendis repellat incidunt vero accusamus ad sequi repudiandae similique aperiam? Doloribus eum dolore nostrum, velit eos esse assumenda debitis minima ratione voluptates nam excepturi illum odit pariatur, suscipit eligendi numquam ad quis! Enim veritatis corrupti, id numquam recusandae magnam rerum eligendi asperiores deserunt perspiciatis facilis modi tempore placeat itaque, illo nam natus at, repellendus ut sapiente perferendis. Aperiam, non, pariatur. Maxime assumenda, corporis, dolores ipsa corrupti minus inventore. Placeat hic eum quos explicabo, ducimus reiciendis sint ad natus, quo corporis aliquam soluta, consectetur magnam! Cupiditate totam quibusdam dolor, soluta itaque, distinctio similique ipsa eos mollitia debitis nemo? Suscipit ullam et quae culpa dignissimos temporibus aspernatur facilis quis consequatur voluptate non deleniti, animi praesentium, expedita obcaecati minus quo consequuntur eaque deserunt repudiandae amet iure optio rem ipsa! Officiis labore, quidem dolores.</p>
+						</div>
 					</div>
 				</div>
 				<div class="col s1 card 4">
@@ -138,8 +173,11 @@
 				$('.big').click(function(){$('.grid').isotope({ filter: '.2,.3' });});
 				$('.sac').click(function(){$('.grid').isotope({ filter: '.2' });});
 				$('.btn-floating').click(function(){$('.grid').isotope('shuffle');});
-				$('.activator').click(function(e){
+				$('.activador').click(function(e){
 					e.preventDefault();
+//					alert('');
+//					$(this).
+					console.log('hola');
 				});
 			});
 
