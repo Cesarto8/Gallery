@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<title>Gallery</title>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<style>
+			li.activate>a{
+				position: relative;
+			}
+			li.activate>a::after{
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				top: 96%;
+				background: white;
+				width: 100%;
+			}
+			.foto{
+				/*				background-image: url('//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/icon-seamless.png?6239600808525385813');*/
+/*				position: ;*/
+				z-index: 2;
+				width: 100%;
+				height: 100%;
+				background: red;
+				position: absolute;
+				background: teal;
+				z-index: -1;
+				opacity: 1;
+			}
+			.foto::after {
+				content: "";
+				background: url(//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/icon-seamless.png?6239600808525385813);
+				opacity: 0.2;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				z-index: -1;
+				position: absolute;
+			}
+			.header{
+				position: relative;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="header">
+		<div class="foto"></div>
+			<div class="navbar">
+				<nav class="nav-extended transparent">
+					<div class="nav-wrapper container">
+						<a href="#" class="brand-logo"><i class="material-icons">camera_enhance</i>Gallery</a>
+						<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+						<ul id="nav-mobile" class="right hide-on-med-and-down">
+							<li class="activate"><a href="">Gallery</a></li>
+							<li><a href="">Dark Theme</a></li>
+							<li><a href="">Blog</a></li>
+							<li><a href="">Docs</a></li>
+							<li><a class='dropdown-trigger' href='#' data-target='dropdown1'>Drop Me!</a></li>
+						</ul>
+					</div>
+					<!-- Dropdown Structure -->
+					<ul id='dropdown1' class='dropdown-content'>
+						<li><a href="#!">one</a></li>
+						<li><a href="#!">two</a></li>
+						<li class="divider" tabindex="-1"></li>
+						<li><a href="#!">three</a></li>
+						<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+						<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+					</ul>
+					<div class="row">
+						<div class="col-12 center" style="margin: 70px 0;">
+							<h1>I MAKE THINGS</h1>
+							<div class="peque" style="margin-top: -50px;margin-bottom: 50px">Portafolio</div>
+						</div>
+					</div>
+					<div class="teal darken-1">
+						<div class="nav-content container">
+							<ul class="tabs tabs-transparent">
+								<li class="tab"><a href="#test1" class="flow-text">Test 1</a></li>
+								<li class="tab"><a class="active flow-text" href="#test2">Test 2</a></li>
+								<li class="tab"><a href="#test3" class="flow-text">Disabled Tab</a></li>
+								<li class="tab"><a href="#test4" class="flow-text">Test 4</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<ul class="sidenav" id="mobile-demo">
+				<li><a href="sass.html">Sass</a></li>
+				<li><a href="badges.html">Components</a></li>
+				<li><a href="collapsible.html">JavaScript</a></li>
+			</ul>
+		</div>
+		<div class="body">
+			<div id="test1" class="col s12">Test 1</div>
+			<div id="test2" class="col s12">Test 2</div>
+			<div id="test3" class="col s12">Test 3</div>
+			<div id="test4" class="col s12">Test 4</div>
+		</div>
+		<div class="footer"></div>
+
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.tabs').tabs();
+				$('.dropdown-trigger').dropdown();
+			});
+
+		</script>
+	</body>
+</html>
